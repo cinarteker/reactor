@@ -16,3 +16,14 @@ jobs:
         with:
           dry: true
           prettier_options: "--check ."
+  markdownlint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4.1.1
+      - name: Run Markdownlint
+        uses: DavidAnson/markdownlint-cli2-action@v14.0.0
+        with:
+          config: ".markdownlint.jsonc"
+          globs: |
+            docs/*.md
