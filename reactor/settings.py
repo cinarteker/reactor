@@ -41,6 +41,7 @@ class Common(Configuration):
         #
         # Project-level apps
         "reactor.core",
+        "reactor.db",
     ]
 
     MIDDLEWARE = [

@@ -12,6 +12,7 @@ __all__ = ["urlpatterns"]
 
 project_urls = [
     path("", include("reactor.core.urls")),
+    path("", include("reactor.db.urls")),
 ]
 
 
