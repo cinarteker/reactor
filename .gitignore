@@ -3,3 +3,9 @@
 
 # Node
 node_modules/
+
+# Byte-compiled files
+__pycache__/
+
+# Distribution and packaging
+dist/
