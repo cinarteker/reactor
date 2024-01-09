@@ -45,6 +45,23 @@ repos:
       - id: ruff
         args: [--fix, --exit-non-zero-on-fix]
       - id: ruff-format
+  - repo: local
+    hooks:
+      - id: django-check
+        name: django-check
+        entry: poetry run python manage.py check
+        language: system
+        pass_filenames: false
+      - id: django-makemigrations
+        name: django-makemigrations
+        entry: poetry run python manage.py makemigrations --check --dry-run
+        language: system
+        pass_filenames: false
+      - id: django-migrate
+        name: django-migrate
+        entry: poetry run python manage.py migrate
+        language: system
+        pass_filenames: false
 
 # Pre-commit.ci
 # https://pre-commit.ci/#configuration
@@ -55,3 +72,6 @@ ci:
   skip:
     - poetry-check
     - poetry-lock
+    - django-check
+    - django-makemigrations
+    - django-migrate
