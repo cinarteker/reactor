@@ -39,3 +39,13 @@ repos:
         args: [--no-interaction]
       - id: poetry-lock
         args: [--no-update, --no-interaction]
+
+# Pre-commit.ci
+# https://pre-commit.ci/#configuration
+
+ci:
+  autofix_commit_msg: "fix: resolve errors found by Pre-commit hooks"
+  autoupdate_commit_msg: "chore(pre-commit.ci): bump hook versions"
+  skip:
+    - poetry-check
+    - poetry-lock
