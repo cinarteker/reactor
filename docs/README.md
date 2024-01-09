@@ -2,6 +2,7 @@
 
 [![Dependabot](https://img.shields.io/badge/dependabot-active-brightgreen?logo=dependabot)][dependabot]
 [![Pre-commit.ci](https://results.pre-commit.ci/badge/github/paduszyk/reactor/main.svg)][pre-commit.ci]
+[![GitHub: Build](https://img.shields.io/github/actions/workflow/status/paduszyk/reactor/build.yaml?logo=github)][github-build]
 
 [![Poetry](https://img.shields.io/endpoint?url=https://python-poetry.org/badge/v0.json)][poetry]
 [![Prettier](https://img.shields.io/badge/code%20style-prettier-1E2B33?logo=Prettier)][prettier]
@@ -27,6 +28,7 @@ Released under the [MIT License][license].
 
 [conventional-commits]: https://conventionalcommits.org
 [dependabot]: https://github.com/paduszyk/reactor/blob/main/.github/dependabot.yaml
+[github-build]: https://github.com/paduszyk/reactor/actions/workflows/build.yaml
 [github-paduszyk]: https://github.com/paduszyk
 [license]: https://github.com/paduszyk/reactor/blob/main/LICENSE
 [poetry]: https://python-poetry.org
