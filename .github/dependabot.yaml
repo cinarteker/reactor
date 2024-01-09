@@ -1,0 +1,47 @@
+# Dependabot
+# https://docs.github.com/en/code-security/dependabot/dependabot-version-updates
+
+version: 2
+
+updates:
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    allow:
+      - dependency-type: "all"
+    pull-request-branch-name:
+      separator: "-"
+    commit-message:
+      prefix: "build"
+      prefix-development: "build"
+      include: "scope"
+    labels:
+      - "dependencies"
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    allow:
+      - dependency-type: "all"
+    pull-request-branch-name:
+      separator: "-"
+    commit-message:
+      prefix: "build"
+      prefix-development: "build"
+      include: "scope"
+    labels:
+      - "dependencies"
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    allow:
+      - dependency-type: "all"
+    pull-request-branch-name:
+      separator: "-"
+    commit-message:
+      prefix: "ci"
+      include: "scope"
+    labels:
+      - "dependencies"
