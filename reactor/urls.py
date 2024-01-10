@@ -18,7 +18,14 @@ project_urls = [
 
 # Includes from the project's contrib apps
 
-contrib_app_urls = []
+contrib_app_urls = [
+    path("", include("contributions.urls")),
+    path("", include("human_resources.urls")),
+    path("", include("publishing_media.urls")),
+    path("", include("science.urls")),
+    path("", include("units.urls")),
+    path("", include("works.urls")),
+]
 
 
 # Admin site
