@@ -7,7 +7,7 @@ from decouple import config
 from django.db import DEFAULT_DB_ALIAS
 from django.utils.translation import gettext_lazy as _
 
-__all__ = ["CI", "Development"]
+__all__ = ["CI", "Development", "Tests"]
 
 DB_ALIAS_ENVIRONMENT_VARIABLE = "DJANGO_DB_ALIAS"
 
@@ -181,3 +181,20 @@ class CI(Debugging):
     DATABASES = {
         "sqlite": db_url.parse("sqlite://:memory:"),
     }
+
+
+class TestsBase(Debugging):
+    """Represents a configuration for running tests."""
+
+
+# Apply local or CI configuration depending on the current environment (detected using
+# the 'CI' environment variable, usually set by default by CI providers, e.g. GitHub).
+
+Tests = type(
+    "Tests",
+    (
+        CI if config("CI", cast=bool, default=False) else Development,
+        TestsBase,
+    ),
+    {},
+)
