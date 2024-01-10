@@ -13,6 +13,7 @@ readme = "docs/README.md"
 repository = "https://github.com/paduszyk/reactor"
 packages = [
   { include = "reactor" },
+  { include = "**/*", from = "apps" },
 ]
 
 [tool.poetry.dependencies]
@@ -64,9 +65,18 @@ section-order = [
   "third-party",
   "django",
   "first-party",
+  "apps",
   "local-folder",
 ]
 known-first-party = ["reactor"]
 
 [tool.ruff.isort.sections]
+"apps" = [
+  "contributions",
+  "human_resources",
+  "publishing_media",
+  "science",
+  "units",
+  "works",
+]
 "django" = ["django"]

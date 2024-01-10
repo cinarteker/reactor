@@ -42,6 +42,14 @@ class Common(Configuration):
         # Project-level apps
         "reactor.core",
         "reactor.db",
+        #
+        # Project-contrib apps
+        "contributions",
+        "human_resources",
+        "publishing_media",
+        "science",
+        "units",
+        "works",
     ]
 
     MIDDLEWARE = [
