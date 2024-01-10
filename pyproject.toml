@@ -50,11 +50,14 @@ select = [
   "W",
   "I",
   "D",
+  "PT",
 ]
 ignore = [
   "E501",
   "D1",
   "D205",
+  "PT009",
+  "PT016",
 ]
 extend-exclude = ["**/migrations/*"]
 
