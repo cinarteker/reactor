@@ -31,6 +31,12 @@ pre-commit = "^3.6.0"
 [tool.poetry.group.lint.dependencies]
 ruff = "^0.1.11"
 
+[tool.poetry.group.test.dependencies]
+pytest = "^7.4.4"
+pytest-cov = "^4.1.0"
+pytest-custom-exit-code = "^0.3.0"
+pytest-django = "^4.7.0"
+
 # Ruff
 # https://docs.astral.sh/ruff/configuration/
 # https://docs.astral.sh/ruff/rules/
