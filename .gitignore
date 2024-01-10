@@ -20,3 +20,11 @@ dist/
 *.sqlite3
 assets/
 media/
+
+# Pytest
+.pytest_cache/
+
+# Coverage
+.coverage
+coverage.xml
+htmlcov/
