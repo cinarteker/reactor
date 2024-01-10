@@ -17,6 +17,12 @@ packages = [
 
 [tool.poetry.dependencies]
 python = "^3.11"
+dj-database-url = "^2.1.0"
+django = { version = "^5.0.1", allow-prereleases = true }
+django-appconf = "^1.0.6"
+django-configurations = { version = "^2.5", extras = ["database"] }
+python-decouple = "^3.8"
+python-dotenv = "^1.0.0"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^3.6.0"
@@ -43,6 +49,7 @@ ignore = [
   "D1",
   "D205",
 ]
+extend-exclude = ["**/migrations/*"]
 
 [tool.ruff.per-file-ignores]
 "__init__.py" = ["F401", "F403"]
@@ -55,7 +62,11 @@ section-order = [
   "future",
   "standard-library",
   "third-party",
+  "django",
   "first-party",
   "local-folder",
 ]
 known-first-party = ["reactor"]
+
+[tool.ruff.isort.sections]
+"django" = ["django"]
